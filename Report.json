@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-09-13T17:21:16.761Z",
+    "end": "2023-09-13T17:23:26.845Z",
+    "duration": 130084
+  },
+  "results": [
+    {
+      "uuid": "ceeeb2a6-0525-499b-b6a1-075035e36437",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Tests\\Task2-AddtoCart\\add-to-cart.cy.js",
+      "file": "cypress\\e2e\\Tests\\Task2-AddtoCart\\add-to-cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5057cadb-4cbf-4e2b-b6a4-871e0754d6e1",
+          "title": "Add Item to Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check adding Item to Cart",
+              "fullTitle": "Add Item to Cart Check adding Item to Cart",
+              "timedOut": null,
+              "duration": 26119,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "addtoCart.searchFor('Lenovo thinkpad');\naddtoCart.SearchResults_selectItem(0);\ncy.wait(2000);\naddtoCart.addItemtoCart();\naddtoCart.gotoCartSidebarButton();\ncy.wait(2000);\naddtoCart.Validate_Item_In_Cart();",
+              "err": {},
+              "uuid": "7b8931e9-c4d6-4369-a47e-3938ac143baa",
+              "parentUUID": "5057cadb-4cbf-4e2b-b6a4-871e0754d6e1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7b8931e9-c4d6-4369-a47e-3938ac143baa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26119,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "35c394c4-0611-4821-9945-618020f38fff",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Tests\\Task3-RFQ\\RFQ.cy.js",
+      "file": "cypress\\e2e\\Tests\\Task3-RFQ\\RFQ.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a6e90f3c-6deb-461c-a83f-53c920c697ab",
+          "title": "Test RFQ Form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create New RFQ",
+              "fullTitle": "Test RFQ Form Create New RFQ",
+              "timedOut": null,
+              "duration": 50223,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.fixture('URLs.json').then((ruls) => {\n//     const {Home, RFQ_Page} = ruls;\n//     const targetPage = Home + RFQ_Page\n//   cy.visit(targetPage)\n//   });\nvar productName = 'Samsung Galaxy A33 5G Mobile Phone Dual SIM Android Smartphone 128GB, 6GB RAM, Black';\nvar quantity = '10';\nvar unitPrice = '1000';\nvar expireDay = '25';\nvar expireMonth = 'September';\nvar expireYear = '2023';\nvar destination = 'Andorra';\nvar city = 'Andorra la Vella';\nrfq.Enter_Product_Name(productName);\nrfq.EnterQuantity(quantity);\nrfq.Enter_Unit_Price(unitPrice);\nrfq.pick_Expire_Date(expireDay, expireMonth, expireYear);\nrfq.choose_Ship_Destination(destination);\nrfq.choose_Shiping_City(city);\n//cy.wait(5000)\nrfq.submit_RFQ();\ncy.wait(8000);\nrfq.validate_RFQ_Submitted();\nrfq.validate_RFQ_URL_Submittion();",
+              "err": {},
+              "uuid": "6af396a0-166f-45cd-b770-6b6f9932b6e0",
+              "parentUUID": "a6e90f3c-6deb-461c-a83f-53c920c697ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6af396a0-166f-45cd-b770-6b6f9932b6e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50223,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f1edeac8-678c-4d6d-a94c-fa0bcb1cf3ca",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Tests\\Task1-login\\login.cy.js",
+      "file": "cypress\\e2e\\Tests\\Task1-login\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "09347a03-020a-4287-b950-5396391fc8d2",
+          "title": "Login to Tradeling Website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with Valid Credentials",
+              "fullTitle": "Login to Tradeling Website Login with Valid Credentials",
+              "timedOut": null,
+              "duration": 38496,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('Environment.json').then(env => {\n  const {\n    Mail,\n    Password,\n    Username\n  } = env;\n  loginPage.Login_to_Website(Mail, Password);\n  loginPage.validate_URL();\n  loginPage.Validate_User_Login(Username);\n});",
+              "err": {},
+              "uuid": "a762cc09-d74e-4a44-b57d-a1f0df895ac8",
+              "parentUUID": "09347a03-020a-4287-b950-5396391fc8d2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a762cc09-d74e-4a44-b57d-a1f0df895ac8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38496,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
