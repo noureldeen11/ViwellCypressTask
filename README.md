@@ -1,5 +1,5 @@
 # ViWell_Automation_Task
-This is a Simple automation project showing how to log in to Tradeling e-commerce website, add items to the cart, and Submit a RFQ Form.
+This is a Simple automation project showing how to log in to the Tradeling e-commerce website, add items to the cart, and Submit RFP form.
 The project is really simple and Made with Cypress. Let's get started.
 
 
@@ -39,16 +39,16 @@ npm init -y
 This command will install the "package.json"
 
 3) Then from the Terminal, we will write the below Command:
-```visual Studio Code
+```Visual Studio Code
 npm install cypress
 ```
 This command will install the latest version of Cypress. to know the exact version, apply the below Command:
-```visual Studio Code
+```Visual Studio Code
 npm cypress -v
 ```
 
 Now to Open Cypress and start executing the Scripts, Apply the Below Command:
-```visual Studio Code
+```Visual Studio Code
 npm cypress open
 ```
 The Command will open the Cypress application, choose the e2e Configurations as the below screen
@@ -90,16 +90,13 @@ To submit this form you must be a registered user, so in the beforeEach(), we ca
 
 The Function starts with variables that the user will enter to be passed as parameters to the functions, such as the product name and unit price.
 
-From lines 34 to 40, the Steps of the form submission is executed. then sadly because of some flakiness and poor network, we then used the cy.wait(). we promise to fix this in the future, and we apologize.
-the last two lines are to validate that the form is submitted successfully.
-
 ## Report
 
-The Report used in this project is Mochawesome HTML Report.
+The Report used in this project is the Mochawesome HTML Report.
 
 To Download the Report open a new terminal and Apply the Below Commands:
 
-```visual Studio Code
+```Visual Studio Code
 npm i mochawesome-report-generator
 npm i mochawesome-merge
 npm install mochawesome
@@ -115,26 +112,26 @@ now open the cypress.config.js and copy the below and paste it in it:
       "reportDir": "cypress/reports"
      }
 
-after installing all what is above, execute the below:
-```visual Studio Code
+after installing all that is above, execute the below:
+```Visual Studio Code
 npx cypress run --reporter mochawesome  
 ```
 
 The Above Command will run the Scripts in headless mode, and after it is done it will make a json report for each script, We should now merege them all so execute the below line:
-```visual Studio Code
+```Visual Studio Code
 npx mochawesome-merge .\cypress\reports\*.json > Report.json
 ```
 Note that the name of the report will be 'fullReport.json' you can name it anything you want.
 
 After that execute the Line Below:
-```visual Studio Code
+```Visual Studio Code
 npx mochawesome-merge .\cypress\reports\*.json | out-file -encoding ascii ./Report.json
 ```
 This will create an HTML report in your repo, open it to see the latest Run Status.
 
 Now to make sure that the report is generated after each run, apply the below:
 1) Go to the package.json
-2) copy the below and paste it in it:
+2) copy the below and paste it into it:
 "scripts": {
     "test":  "npm run cypress-test || npm run posttest",
     "cypress-test": "cypress run",
